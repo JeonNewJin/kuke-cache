@@ -9,7 +9,7 @@ class DataSerializerTest {
         MyData myData = new MyData("id", "data");
         String serialized = DataSerializer.serializeOrException(myData);
 
-        MyData deserialized = DataSerializer.deserializeOrException(serialized, MyData.class);
+        MyData deserialized = DataSerializer.deserializeOrNull(serialized, MyData.class);
         Assertions.assertThat(deserialized).isEqualTo(myData);
     }
 

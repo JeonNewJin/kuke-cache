@@ -19,7 +19,7 @@ public class DataSerializer {
         }
     }
 
-    public static <T> T deserializeOrException(String data, Class<T> clazz) {
+    public static <T> T deserializeOrNull(String data, Class<T> clazz) {
         try {
             return objectMapper.readValue(data, clazz);
         }  catch (Exception e) {
