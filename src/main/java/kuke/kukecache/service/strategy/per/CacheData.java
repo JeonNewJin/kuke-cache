@@ -3,7 +3,6 @@ package kuke.kukecache.service.strategy.per;
 import kuke.kukecache.common.serde.DataSerializer;
 import lombok.Getter;
 import lombok.ToString;
-import org.springframework.util.unit.DataSize;
 
 import java.time.Duration;
 import java.time.Instant;

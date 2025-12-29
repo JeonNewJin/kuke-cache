@@ -10,8 +10,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class ProbabilisticEarlyRecomputationStrategyApiTest {
-    static final CacheStrategy CACHE_STRATEGY = CacheStrategy.PROBABILISTIC_EARLY_RECOMPUTATION;
+public class RequestCollapsingStrategyApiTest {
+    static final CacheStrategy CACHE_STRATEGY = CacheStrategy.REQUEST_COLLAPSING;
 
     @Test
     void test() throws InterruptedException {
