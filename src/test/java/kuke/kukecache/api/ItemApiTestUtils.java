@@ -17,14 +17,14 @@ public class ItemApiTestUtils {
                 .body(ItemResponse.class);
     }
 
-    static ItemPageResponse readAll(CacheStrategy cacheStrategy, Long page, Long pageSize) {
+    static ItemPageResponse readAll(CacheStrategy cacheStrategy, long page, long pageSize) {
         return restClient.get()
                 .uri("/cache-strategy/%s/items?page=%s&pageSize=%s".formatted(cacheStrategy.name(), page, pageSize))
                 .retrieve()
                 .body(ItemPageResponse.class);
     }
 
-    static ItemPageResponse readAllInfiniteScroll(CacheStrategy cacheStrategy, Long lastItemId, Long pageSize) {
+    static ItemPageResponse readAllInfiniteScroll(CacheStrategy cacheStrategy, Long lastItemId, long pageSize) {
         return restClient.get()
                 .uri(
                         lastItemId == null ?
